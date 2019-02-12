@@ -1,0 +1,29 @@
+reg_index codeGen( struct tnode *t) {
+  	FILE *xsm_file;
+	xsm_file=fopen("arith.xsm","w");
+ 	printf("%c",*(t->op));
+ 	//t->left=NULL;
+ if( (t->left) == NULL)//((t->left)==NULL) && ((t->right)==NULL))
+       {
+       int p = getreg();
+       printf("dsfdfd");
+//	fprintf(target_file,“MOVR%d,%d”,p,t->al);
+	//fprintf(xsm_file,"MOV R%d, %d",p,t->val);
+	return p;
+  }
+  
+ else
+  {  
+   //printf("%d %d",(t->left)->left,9);
+   
+//  printf("%d %d",codeGen(t->left),codeGen(t->right));
+  //return codeGen(t->left);
+    	  //fprintf(target_file,“ADDR%d,R%d”,codeGen(t->left),codeGen(t->right));
+    int left,right;
+  //left=codeGen((t->left));	   
+  //   fprintf(xsm_file,"ADD R%d,R%d",codeGen(t->left),codeGen(t->right));
+    // 	  freereg(codeGen(t->left));
+         freereg();
+      	 return left;	//codeGen(t->left);
+  }
+ }
