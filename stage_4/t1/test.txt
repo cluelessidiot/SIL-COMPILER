@@ -1,9 +1,0 @@
-begin 
-decl
-int num, sum;
-str mesg;
-int as,fgg,d;
-str fdfdf,gffgfgfgfgfggf;
-enddecl
-end
-
