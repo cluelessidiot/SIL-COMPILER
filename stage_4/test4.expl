@@ -1,0 +1,13 @@
+begin
+
+decl
+	int a,*p123;
+enddecl
+
+a=3;
+p123=&a;
+write(*p123);
+write(&p123);
+write(a);
+
+end

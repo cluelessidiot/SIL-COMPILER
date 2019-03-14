@@ -1,0 +1,56 @@
+begin
+  decl
+	int a[2][2],b[2][2],mul[2][2],i,j,k,m,n,p;
+  enddecl
+
+  read(m);
+  read(n);
+  read(p);
+  
+  i=0;
+  while(i<m) do
+	j=0;
+	while(j<n) do
+		read(a[i][j]);
+		j=j+1;
+	endwhile;
+	i=i+1;
+  endwhile;
+
+  i=0;
+  while(i<n) do
+	j=0;
+	while(j<p) do
+		read(b[i][j]);
+		j=j+1;
+	endwhile;
+	i=i+1;
+  endwhile;
+
+  i=0;
+  while(i<m) do
+	k=0;
+	while(k<p) do
+		mul[i][k]=0;
+		j=0;
+		while(j<n) do
+			mul[i][k]=mul[i][k]+(a[i][j]*b[j][k]);
+			j=j+1;
+		endwhile;
+		k=k+1;
+	endwhile;
+	i=i+1;
+  endwhile;
+
+  i=0;
+  while(i<m) do
+	j=0;
+	while(j<p) do
+		write(mul[i][j]);
+		j=j+1;
+	endwhile;
+	i=i+1;
+  endwhile;
+
+
+end
