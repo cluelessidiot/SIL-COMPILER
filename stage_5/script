@@ -1,0 +1,12 @@
+#!/bin/bash
+cd $HOME/xsm_expl/stage_5/
+echo YACC FILE....
+yacc -d arith.y
+echo LEX FILE.....
+lex arith.l
+echo LINKING....
+gcc y.tab.c lex.yy.c -w -g 
+#echo testing
+./a.out test.txt
+#echo label translator
+./label arith.xsm out.xsm
