@@ -1,0 +1,20 @@
+decl
+	int a,b,c;
+	tuple Student( int age, str name) x,y;
+enddecl
+
+
+int main(){
+decl
+	int i;
+enddecl
+
+begin
+	x.name="rohith";
+	x.age=19;
+	y=x;
+	write(y.name);
+	write(y.age);
+	return 0;
+end
+}
