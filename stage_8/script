@@ -1,0 +1,12 @@
+#!/bin/bash
+cd $HOME/comp/stage_8
+echo YACC FILE....
+yacc -d arith\.y
+echo LEX FILE.....
+lex arith.l
+echo LINKING....
+gcc y.tab.c lex.yy.c -w -g 
+echo running
+./a.out arith.txt arith.xsm
+echo label
+./label arith.xsm out.xsm
